@@ -12,11 +12,6 @@ public class test {
     public static double[][][][] lookup = new double[drawingPanel.getHeight()][drawingPanel.getHeight()][2][10];
     public static void main(String args[]) {
         a = true;
-        for (int i = 0; i < drawingPanel.getHeight(); i++) {
-            for (int j = i % 2; j < drawingPanel.getWidth(); j+= 2) {
-                drawingPanel.setPixel(j, i, Color.BLACK);
-            }
-        }
         int[] pos = new int[2];
         drawingPanel.setAntiAlias(false);
         drawingPanel.onMouseDown((x, y) -> {if (a) { pos[0] = x; pos[1] = y; drawingPanel.setPixel(x, y, Color.BLACK); }});
